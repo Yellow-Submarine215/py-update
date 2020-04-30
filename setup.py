@@ -1,14 +1,22 @@
-from setuptools import setup
-setup(name = 'py-update',
-      version = '0.0.1',
-      author = '_ToOOom',
-      author_email = 'yellowsubmarine.dev@gmail;com',
-      keywords = 'update github checker update-checker'
-      url = 'https://yellow-submarine215.github.io/py-update/'
-      classifiers = ['Topic :: Software Development',
-                     'Natural Language :: English',
-                     'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)']
-      install_requires = ['requests>=2.23.0']
-      
-      )
+import setuptools
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
+setuptools.setup(
+    name="py-update", # Replace with your own username
+    version="0.0.1",
+    author="_ToOOom",
+    author_email="yellow-submarine.dev@gmail.com",
+    description="A python module that allows you to check for updates from a Github repository and install them",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://yellow-submarine215.github.io/py-update/",
+    packages=setuptools.find_packages(),
+    install_requires=['requests>=2.23.0'],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.8',
+)
